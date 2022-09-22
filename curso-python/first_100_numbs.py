@@ -1,6 +1,12 @@
 def run():
-    for i in range(101):
-        print(i**2)
+    # squares = []
+    # for i in range(101):
+    #     if i**2 % 3 != 0:
+    #         squares.append(i**2)
+
+    squares = [i**2 for i in range(1, 100000) if i % 36 != 0]
+
+    print(squares)
 
 
 if __name__ == '__main__':
