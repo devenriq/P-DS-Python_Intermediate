@@ -7,9 +7,15 @@ def divisor(num):
 
 
 def run():
-    num = int(input('Please, write a number: '))
-    print(divisor(num))
-    print('The program is finished')
+    try:
+        num = int(input('Please, write a number: '))
+        if num < 0:
+            raise ValueError
+
+        print(divisor(num))
+        print('The program is finished')
+    except ValueError:
+        print('You must give a positive number')
 
 
 if __name__ == "__main__":
